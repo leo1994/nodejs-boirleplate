@@ -4,17 +4,21 @@ const helmet = require("helmet");
 const express = require("express");
 const bodyparser = require("body-parser");
 
+const database = require("./database");
+
+/**
+ * Connect database
+ */
+database();
+
 const app = express();
 
 /**
- * Parse incoming request bodies in a middleware before your handlers,
- * available under the req.body property.
+ * Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
  *
- * bodyparser.json()
- * Content-Type: application/json
+ * bodyparser.json() - Content-Type: application/json
  *
- * bodyparser.urlencoded({ extended: true })
- * Content-Type: application/x-www-form-urlencoded and the extended option
+ * bodyparser.urlencoded({ extended: true }) - Content-Type: application/x-www-form-urlencoded and the extended option
  * allows parsing the URL-encoded data with the qs library
  */
 app.use(bodyparser.json());
