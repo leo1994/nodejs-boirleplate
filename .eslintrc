@@ -1,4 +1,11 @@
 {
   "extends": ["airbnb-base", "prettier"],
-  "plugins": ["mocha"]
+  "plugins": ["mocha"],
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "expect": true,
+    "request": true
+  }
 }

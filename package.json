@@ -22,7 +22,7 @@
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "test": "NODE_APP=test mocha",
+    "test": "NODE_APP=test mocha test/**/*.js",
     "dev": "NODE_APP=development nodemon index.js"
   },
   "repository": {
