@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const databaseUrl = require("../config/database");
+const { database: databaseUrl } = require("../config");
 
 /**
  * Function to connect mongodb
